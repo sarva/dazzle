@@ -14,6 +14,9 @@ const devPlugins = [
 
 const prodPlugins = [
   new webpack.optimize.OccurenceOrderPlugin(),
+  new webpack.optimize.UglifyJsPlugin({
+    mangle: false
+  })
 ];
 
 const plugins = basePlugins
